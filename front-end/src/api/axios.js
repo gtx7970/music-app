@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const base_url = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3000'
+const base_url = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3001'
 const ERR_OK = 0
 
 axios.defaults.baseURL = base_url

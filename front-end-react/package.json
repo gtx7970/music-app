@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@better-scroll/core": "^2.3.1",
+    "@better-scroll/slide": "^2.3.1",
     "@craco/craco": "^6.1.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",

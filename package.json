@@ -5,6 +5,7 @@
   "scripts": {
     "server:dev": " cd ./back-end && yarn start:dev",
     "frontend:dev": "cd ./front-end && yarn serve",
+    "frontend:react:dev": "cd ./front-end-react && yarn start",
     "dev": "npm-run-all --parallel server:dev frontend:dev"
   },
   "license": "MIT",

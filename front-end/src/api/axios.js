@@ -5,7 +5,6 @@ const ERR_OK = 0
 
 axios.defaults.baseURL = base_url
 
-
 export function get(url, params) {
   return axios.get(url, {params}).then(res => {
     const serverData = res.data

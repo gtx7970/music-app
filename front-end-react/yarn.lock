@@ -1150,6 +1150,13 @@
   dependencies:
     "@better-scroll/shared-utils" "^2.3.1"
 
+"@better-scroll/observe-dom@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@better-scroll/observe-dom/-/observe-dom-2.3.1.tgz#bfb09456305b8a47dae60804d7647f9db36ae104"
+  integrity sha512-d1syBdrRuhdkUcNSwfu/fEIcWKlxeVgfUiMAbVw4iUp7jLQVZe8hKsBXU0zHy+CMW++mqoeuPK6owBjIohH8eQ==
+  dependencies:
+    "@better-scroll/core" "^2.3.1"
+
 "@better-scroll/shared-utils@^2.3.1":
   version "2.3.1"
   resolved "https://registry.nlark.com/@better-scroll/shared-utils/download/@better-scroll/shared-utils-2.3.1.tgz?cache=0&sync_timestamp=1620475245367&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40better-scroll%2Fshared-utils%2Fdownload%2F%40better-scroll%2Fshared-utils-2.3.1.tgz#e863a6ed32aa79d37870dafe26b052827017a88f"

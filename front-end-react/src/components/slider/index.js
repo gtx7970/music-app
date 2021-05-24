@@ -1,26 +1,29 @@
-import { useRef } from 'react'
-import { useSlider } from '../../hooks'
+import { useRef, memo } from 'react';
+import { useSlider } from '../../hooks';
 
 function Slider({ sliders }) {
-  const wrapperRef = useRef()
-  const { currentIndex } = useSlider(wrapperRef)
+  const wrapperRef = useRef();
+  const { currentIndex } = useSlider(wrapperRef, sliders);
   return (
     <div className='slider' ref={wrapperRef}>
-      <div className='slider-group'>
+      <div className='overflow-hidden relative whitespace-nowrap'>
         {sliders.map((item) => {
           return (
-            <div className='slider-page' key={item.id}>
-              <a href={item.link}>
-                <img src={item.pic} alt='' />
+            <div className='inline-block' key={item.pic}>
+              <a href={item.link} className="block w-full">
+                <img src={item.pic} alt='' className="block w-full" />
               </a>
             </div>
           );
         })}
       </div>
-      <div class='dots-wrapper'>
+      <div className='dots-wrapper'>
         {sliders.map((item, i) => {
           return (
-            <span key={item.id} className={{ active: currentIndex === i, dot: true }}></span>
+            <span
+              key={item.pic}
+              className={{ active: currentIndex === i, dot: true }}
+            ></span>
           );
         })}
       </div>
@@ -28,4 +31,4 @@ function Slider({ sliders }) {
   );
 }
 
-export default Slider;
+export default memo(Slider);

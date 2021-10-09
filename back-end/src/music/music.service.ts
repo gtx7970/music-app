@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { getRandomVal, commonParams } from '../utils';
+import { getRandomVal, commonParams, ERROR_CODE, errorData } from '../utils';
 import axios from 'axios';
 const getSecuritySign = require('../utils/sign/sign');
 
@@ -45,7 +45,7 @@ export class MusicService {
 
     const { data } = res;
 
-    if (data.code === 0) {
+    if (data.code === ERROR_CODE) {
       const focusList = data.focus.data.shelf.v_niche[0].v_card;
       const sliders = [];
       const jumpPrefixMap = {
@@ -87,16 +87,15 @@ export class MusicService {
       }
 
       return {
-        code: 0,
-        result: {
+        success: true,
+        desc: 'success',
+        data: {
           sliders,
           albums,
         },
       };
     } else {
-      return {
-        name: 'ass',
-      };
+      return errorData;
     }
   }
 }

@@ -6,6 +6,7 @@ import {
   ERROR_CODE,
   mergeSinger,
   fallbackPicUrl,
+  commonParams,
 } from '../utils';
 import axios from 'axios';
 
@@ -66,9 +67,11 @@ export class SearchService {
     };
 
     const res = await axios.get(url, {
-      params: {
-        data,
+      headers: {
+        referer: 'https://y.qq.com/',
+        origin: 'https://y.qq.com/',
       },
+      params: Object.assign({}, commonParams, data),
     });
 
     const { data: resData } = res;

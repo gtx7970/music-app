@@ -2,31 +2,31 @@
 
 #### 推荐列表
 ```js
-/api/getRecommend
+/music/recommend
 ```
 
 #### 歌手列表
-/api/getSingerList
+/singer/list
 
 #### 歌手详情
-/api/getSingerDetail
+/singer/detail?mid=xxx
 
 #### 歌曲url
-/api/getSongsUrl
+/song/url?mid[]=xxx
 #### 歌词
-/api/getLyric
+/song/lyric?mid=xxx
 
 #### 歌单专辑
-/api/getAlbum
+/song/album?id=xxx
 
 #### 排行榜
-/api/getTopList
+/toplist
 
 #### 排行榜详情
-/api/getTopDetail
+/toplist/detail?id=xxx&period=xxx
 
 #### 热门搜索
-/api/getHotKeys
+/search/hot
 
 ### 搜索查询
-/api/search
+/search?query=xxx&page=xxx&showSinger=x

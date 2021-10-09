@@ -1,0 +1,32 @@
+### 推荐列表
+GET http://localhost:3001/music/recommend
+
+### 歌手列表
+
+GET http://localhost:3001/singer/list
+
+### 歌手详情
+GET http://localhost:3001/singer/detail?mid=0025NhlN2yWrP4
+
+### 歌曲url
+GET http://localhost:3001/song/url?mid[]=001PLl3C4gPSCI
+
+### 专辑
+GET http://localhost:3001/song/album?id=7594912510
+
+### 歌词
+GET http://localhost:3001/song/lyric?mid=001PLl3C4gPSCI
+
+### 排行榜
+GET http://localhost:3001/toplist
+
+### 排行榜详情
+GET http://localhost:3001/toplist/detail?id=62&period=2021-10-09
+
+### 热门搜索
+GET http://localhost:3001/search/hot
+
+### 搜索
+GET http://localhost:3001/search?query=indian summer&page=1&showSinger=true
+
+

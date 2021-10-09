@@ -6,6 +6,7 @@ import {
   ERROR_CODE,
   errorData,
   handleSongList,
+  commonParams,
 } from '../utils';
 import axios from 'axios';
 import { Base64 } from 'js-base64';
@@ -59,6 +60,7 @@ export class SongService {
       return axios.post(url, data).then((response) => {
         const data = response.data;
         if (data.code === ERROR_CODE) {
+          console.log(data);
           const midInfo = data.req_0.data.midurlinfo;
           const sip = data.req_0.data.sip;
           const domain = sip[sip.length - 1];
@@ -90,11 +92,15 @@ export class SongService {
   async getLyric(mid): Promise<any> {
     const url = 'https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric_new.fcg';
     const res = await axios.get(url, {
-      params: {
+      params: Object.assign({}, commonParams, {
         '-': 'MusicJsonCallback_lrc',
         pcachetime: +new Date(),
         songmid: mid,
         g_tk_new_20200303: token,
+      }),
+      headers: {
+        referer: 'https://y.qq.com/',
+        origin: 'https://y.qq.com/',
       },
     });
 
@@ -135,9 +141,7 @@ export class SongService {
     const sign = getSecuritySign(JSON.stringify(data));
     const url = `https://u.y.qq.com/cgi-bin/musics.fcg?_=${getRandomVal()}&sign=${sign}`;
 
-    const res = await axios.post(url, {
-      data,
-    });
+    const res = await axios.post(url, data);
 
     const { data: resData } = res;
 

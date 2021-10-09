@@ -8,4 +8,4 @@ import { MusicService } from './music.service'
   providers: [MusicService]
 })
 
-export class MusiMosule {}
+export class MusicModule {}

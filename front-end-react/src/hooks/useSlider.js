@@ -28,7 +28,7 @@ export function useSlider(wrapperRef, sliders) {
         sliderVal.destroy();
       };
     }
-  }, [sliders.length]);
+  }, [sliders, wrapperRef]);
 
   return {
     currentIndex,

@@ -10,7 +10,7 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "front-end-reacr/src/**/*.js": [
+    "front-end-react/src/**/*.js": [
       "eslint --fix --ext .js",
       "prettier --write",
       "git add"

@@ -1,5 +1,5 @@
-import { Controller, Get } from '@nestjs/common'
-import { MusicService } from './music.service'
+import { Controller, Get } from '@nestjs/common';
+import { MusicService } from './music.service';
 
 @Controller('music')
 export class MusicController {
@@ -7,19 +7,6 @@ export class MusicController {
 
   @Get('/recommend')
   getRecommend() {
-    return this.musicService.getRecommend()
+    return this.musicService.getRecommend();
   }
-
-  @Get('/singerList')
-  getSingerList() {}
-
-  @Get('/singerDetail')
-  getSingerDetail() {}
-
-  @Get('/songUrl')
-  getSongUrl() {}
-
-  @Get('/lyric')
-  getLyric() {}
-
 }

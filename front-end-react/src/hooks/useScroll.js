@@ -5,7 +5,8 @@ import ObserveDOM from '@better-scroll/observe-dom'
 BScroll.use(ObserveDOM)
 
 export function useScroll(wrapper, options) {
-  const [position, setPosition] = useState('')
+  console.log(wrapper, options)
+  const [position, setPosition] = useState({})
   useEffect(() => {
     if (wrapper.current) {
       const scroll = new BScroll(wrapper.current, {
@@ -25,7 +26,7 @@ export function useScroll(wrapper, options) {
         scroll.destroy()
       }
     }
-  }, [options])
+  }, [options, wrapper])
 
   return {
     position

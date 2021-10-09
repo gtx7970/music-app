@@ -25,6 +25,8 @@
     "@nestjs/core": "^7.6.15",
     "@nestjs/platform-express": "^7.6.15",
     "axios": "^0.21.1",
+    "js-base64": "^3.7.2",
+    "pinyin": "^2.10.2",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.6"

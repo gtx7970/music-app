@@ -1,9 +1,11 @@
 <template>
-  <div>top list</div>
+  <div>2</div>
 </template>
 
-<script>
-export default {}
-</script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 
-<style lang="less" scoped></style>
+export default defineComponent({
+  setup() {},
+})
+</script>

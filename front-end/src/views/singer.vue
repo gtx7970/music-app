@@ -1,9 +1,11 @@
 <template>
-  <div>this is singer</div>
+  <div>1</div>
 </template>
 
-<script>
-export default {}
-</script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 
-<style lang="less" scoped></style>
+export default defineComponent({
+  setup() {},
+})
+</script>

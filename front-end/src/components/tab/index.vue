@@ -13,22 +13,23 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
+
 const TAB_INFOS = [
   { name: '推荐', path: '/recommend' },
   { name: '歌手', path: '/singer' },
   { name: '排行', path: '/top-list' },
-  { name: '搜索', path: '/search' }
+  { name: '搜索', path: '/search' },
 ]
-export default {
-  data() {
-    return {}
-  },
 
-  created() {
-    this.tabs = TAB_INFOS
-  }
-}
+export default defineComponent({
+  setup() {
+    return {
+      tabs: TAB_INFOS,
+    }
+  },
+})
 </script>
 
 <style lang="less" scoped>

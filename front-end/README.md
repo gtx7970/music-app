@@ -1,4 +1,4 @@
-# vue-music-next
+# front-end-vue3
 
 ## Project setup
 ```
@@ -27,16 +27,3 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-## vue-music-app-next
-
-### resource
-
-#### 基本布局
-
-```html
-<meat viewport>
-```
-
-#### 字体文件

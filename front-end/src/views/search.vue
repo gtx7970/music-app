@@ -1,9 +1,11 @@
-<script>
-export default {
-  render() {
-    return <div>2333</div>
-  }
-}
-</script>
+<template>
+  <div>1</div>
+</template>
 
-<style lang="less" scoped></style>
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  setup() {},
+})
+</script>

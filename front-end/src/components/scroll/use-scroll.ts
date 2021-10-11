@@ -11,7 +11,7 @@ import {
 
 BScroll.use(ObserveDOM)
 
-export const useScroll = (el: Ref, options, emit) => {
+export const useScroll = (el: Ref, options: any, emit: any) => {
   const scroll = ref<any>(null)
   onMounted(() => {
     scroll.value = new BScroll(el.value, {
@@ -20,7 +20,7 @@ export const useScroll = (el: Ref, options, emit) => {
     })
 
     if (options.probeType > 0) {
-      scroll.value.on('scroll', (pos) => {
+      scroll.value.on('scroll', (pos: any) => {
         emit('scroll', pos)
       })
     }

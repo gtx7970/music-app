@@ -3,3 +3,14 @@ export interface ResModel<T = any> {
   desc: string | null
   data: T
 }
+
+export interface Song {
+  album: string
+  duration: number
+  id: number
+  mid: string
+  name: string
+  pic: string
+  singer: string
+  url: string
+}
